@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Hospicio</title>
+    <title>Fugir do mouse</title>
     <style>
         body {
             margin: 0;
@@ -11,40 +11,9 @@
             background-color: black;
         }
 
-        .movable-container1 {
+        .movable-container {
             position: absolute;
             cursor: pointer;
-            top: 100px;
-            left: 50px;
-        }
-        .movable-container2 {
-            position: absolute;
-            cursor: pointer;
-            top: 130px;
-            left: 50px;
-        }
-        .movable-container3 {
-            position: absolute;
-            cursor: pointer;
-            top: 160px;
-            left: 50px;
-        }
-        .movable-container4 {
-            position: absolute;
-            cursor: pointer;
-            top: 190px;
-            left: 50px;
-        }
-        .movable-container5 {
-            position: absolute;
-            cursor: pointer;
-            top: 220px;
-            left: 50px;
-        }
-        .movable-container6 {
-            position: absolute;
-            cursor: pointer;
-            top: 250px;
             left: 50px;
         }
 
@@ -53,10 +22,10 @@
             font-size: 18px;
             color: #ff9900;
             position: absolute;
-            top: 280px;
             left: 50px;
             cursor: pointer;
         }
+
         .movable-text {
             font-size: 18px;
             color: #0099ff;
@@ -70,43 +39,51 @@
             font-size: 30px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
+
+        @media (max-width: 768px) {
+            .movable-container {
+                left: 10px; /* Reduz a margem à esquerda para dispositivos móveis */
+            }
+
+            .special-name {
+                left: 10px; /* Reduz a margem à esquerda para dispositivos móveis */
+            }
+
+            .centered-text {
+                font-size: 24px; /* Reduz o tamanho da fonte do texto centralizado para dispositivos móveis */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="centered-text">
-        <p>Clique no mais gay do grupo: </p>
+        <p>Clique no mais gay do grupo</p>
     </div>
     
-    <div class="movable-container1">
+    <div class="movable-container" style="top: 100px;">
         <p class="movable-text">Carlos</p>
     </div>
-    <div class="movable-container2">
+    <div class="movable-container" style="top: 130px;">
         <p class="movable-text">Marcelo</p>
     </div>
-    <div class="movable-container3">
+    <div class="movable-container" style="top: 160px;">
         <p class="movable-text">Dettogni</p>
     </div>
-    <div class="movable-container4">
+    <div class="movable-container" style="top: 190px;">
         <p class="movable-text">Santana</p>
     </div>
-    <div class="movable-container5">
+    <div class="movable-container" style="top: 220px;">
         <p class="movable-text">Oto</p>
     </div>
-    <div class="movable-container6">
+    <div class="movable-container" style="top: 250px;">
         <p class="movable-text">Matheus</p>
     </div>
-    <div class="special-name">
+    <div class="special-name" style="top: 280px;">
         <p class="movable-text">Bittencourt</p>
     </div>
 
-
     <script>
-        const movableContainer1 = document.querySelector('.movable-container1');
-        const movableContainer2 = document.querySelector('.movable-container2');
-        const movableContainer3 = document.querySelector('.movable-container3');
-        const movableContainer4 = document.querySelector('.movable-container4');
-        const movableContainer5 = document.querySelector('.movable-container5');
-        const movableContainer6 = document.querySelector('.movable-container6');
+        const movableContainers = document.querySelectorAll('.movable-container');
         const specialName = document.querySelector('.special-name');
         
         // Função para mover o elemento aleatoriamente na tela
@@ -122,28 +99,10 @@
         }
 
         // Adiciona um evento de hover para mover o elemento quando o mouse estiver sobre ele
-        movableContainer1.addEventListener('mouseenter', function() {
-            moveTextRandomly(movableContainer1);
-        });
-        
-        movableContainer2.addEventListener('mouseenter', function() {
-            moveTextRandomly(movableContainer2);
-        });
-
-        movableContainer3.addEventListener('mouseenter', function() {
-            moveTextRandomly(movableContainer3);
-        });
-
-        movableContainer4.addEventListener('mouseenter', function() {
-            moveTextRandomly(movableContainer4);
-        });
-
-        movableContainer5.addEventListener('mouseenter', function() {
-            moveTextRandomly(movableContainer5);
-        });
-
-        movableContainer6.addEventListener('mouseenter', function() {
-            moveTextRandomly(movableContainer6);
+        movableContainers.forEach(container => {
+            container.addEventListener('mouseenter', function() {
+                moveTextRandomly(container);
+            });
         });
 
         specialName.addEventListener('click', function() {
