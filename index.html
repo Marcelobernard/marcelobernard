@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fugir do mouse</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .movable-container1 {
+            position: absolute;
+            cursor: pointer;
+            left: 460px;
+        }
+        .movable-container2 {
+            position: absolute;
+            cursor: pointer;
+            left: 550px;
+        }
+        .movable-container3 {
+            position: absolute;
+            cursor: pointer;
+            left: 650px;
+        }
+        .movable-container4 {
+            position: absolute;
+            cursor: pointer;
+            left: 750px;
+        }
+        .movable-container5 {
+            position: absolute;
+            cursor: pointer;
+            left: 840px;
+        }
+        .movable-container6 {
+            position: absolute;
+            cursor: pointer;
+            left: 900px;
+        }
+
+        .special-name {
+            /* Estilize o nome especial de acordo com suas preferências */
+            font-size: 18px;
+            color: #ff9900;
+            position: absolute;
+            left: 1000px; /* Defina a posição do nome especial */
+            cursor: pointer;
+        }
+        .movable-text {
+            font-size: 18px;
+            color: #0099ff;
+        }
+
+        .centered-text {
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-text">
+        <p>Clique no mais gay do grupo</p>
+    </div>
+    
+    <div class="movable-container1">
+        <p class="movable-text">Carlos</p>
+    </div>
+    <div class="movable-container2">
+        <p class="movable-text">Marcelo</p>
+    </div>
+    <div class="movable-container3">
+        <p class="movable-text">Dettogni</p>
+    </div>
+    <div class="movable-container4">
+        <p class="movable-text">Santana</p>
+    </div>
+    <div class="movable-container5">
+        <p class="movable-text">Oto</p>
+    </div>
+    <div class="movable-container6">
+        <p class="movable-text">Matheus</p>
+    </div>
+    <div class="special-name">
+        <p class="movable-text">Bittencourt</p>
+    </div>
+
+
+    <script>
+        const movableContainer1 = document.querySelector('.movable-container1');
+        const movableContainer2 = document.querySelector('.movable-container2');
+        const movableContainer3 = document.querySelector('.movable-container3');
+        const movableContainer4 = document.querySelector('.movable-container4');
+        const movableContainer5 = document.querySelector('.movable-container5');
+        const movableContainer6 = document.querySelector('.movable-container6');
+        const specialName = document.querySelector('.special-name');
+        
+        // Função para mover o elemento aleatoriamente na tela
+        function moveTextRandomly(container) {
+            const maxX = window.innerWidth - container.clientWidth;
+            const maxY = window.innerHeight - container.clientHeight;
+
+            const newX = Math.random() * maxX;
+            const newY = Math.random() * maxY;
+
+            container.style.left = `${newX}px`;
+            container.style.top = `${newY}px`;
+        }
+
+        // Adiciona um evento de hover para mover o elemento quando o mouse estiver sobre ele
+        movableContainer1.addEventListener('mouseenter', function() {
+            moveTextRandomly(movableContainer1);
+        });
+        
+        movableContainer2.addEventListener('mouseenter', function() {
+            moveTextRandomly(movableContainer2);
+        });
+
+        movableContainer3.addEventListener('mouseenter', function() {
+            moveTextRandomly(movableContainer3);
+        });
+
+        movableContainer4.addEventListener('mouseenter', function() {
+            moveTextRandomly(movableContainer4);
+        });
+
+        movableContainer5.addEventListener('mouseenter', function() {
+            moveTextRandomly(movableContainer5);
+        });
+
+        movableContainer6.addEventListener('mouseenter', function() {
+            moveTextRandomly(movableContainer6);
+        });
+
+        specialName.addEventListener('click', function() {
+            // Redireciona para a outra página
+            window.location.href = 'bittencourt.html';
+        });
+    </script>
+</body>
+</html>
