@@ -22,15 +22,15 @@ h1 {
 #calculadora-form {
     background-color: white;
     border-radius: 10px;
-    padding: 20px;
+    padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
+    margin: 22px auto;
     max-width: 400px;
 }
 
 /* Style form elements */
 label, input, select {
-    display: block;
+    display:block;
     margin: 10px 0;
 }
 
@@ -38,7 +38,7 @@ input, select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 /* Style the button */
@@ -46,7 +46,7 @@ input, select {
     background-color: #333;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
 }
@@ -59,4 +59,33 @@ input, select {
 #resultado {
     margin-top: 20px;
     font-weight: bold;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+
+    h1 {
+        padding: 15px;
+    }
+
+    #calculadora-form {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    label, input, select {
+        margin: 5px 0;
+    }
+
+    input, select {
+        padding: 8px;
+    }
+    
+    #calcular-btn {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
 }
