@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Desconto</title>
+</head>
+<body>
+    <h1>Calculadora de Desconto</h1>
+    <form action="/" method="POST">
+        <label for="price">Digite o preço do notebook:</label>
+        <input type="text" id="price" name="price" required><br>
+
+        <label for="discount">Digite o desconto (%):</label>
+        <input type="text" id="discount" name="discount" required><br>
+
+        <label for="coupon">Digite o valor do cupom:</label>
+        <input type="text" id="coupon" name="coupon" required><br>
+
+        <input type="submit" value="Calcular">
+    </form>
+
+    <div>
+        <h2>Resultado:</h2>
+        <p>{{ result }}</p>
+    </div>
+</body>
+</html>
