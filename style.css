@@ -6,10 +6,6 @@ body {
     padding: 0;
 }
 
-#assinatura {
-    font-family: cursive;
-}
-
 header {
     background-color: #222;
     color: #fff;
@@ -80,14 +76,12 @@ body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
 img {vertical-align: middle;}
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
