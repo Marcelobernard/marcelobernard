@@ -1,91 +1,76 @@
-/* Reset some default styles */
-body, h1, label, input, select, button {
-    margin: 0;
+body {
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.952);
+    line-height: 1.2;
+    flex-direction: column;
     padding: 0;
-    font-family: Arial, sans-serif;
 }
 
-/* Style the body */
-body {
-    background-color: #f2f2f2;
+#assinatura {
+    font-family: cursive;
+}
+
+header {
+    background-color: #222; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+h1 {
+    font-size: 36px;
+    font-family: 'Pacifico', cursive;
+    margin: 0;
+    padding-bottom: 10px; /* Adiciona um pouco de espaço abaixo do título */
+    border-bottom: 2px solid #00d5ff; /* Linha decorativa azul abaixo do título */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00d5ff; /* Cor de destaque azul */
+    font-weight: bold;
+    transition: color 0.2s; /* Adiciona uma transição suave na cor do texto */
+}
+
+nav a:hover {
+    color: #ff6600; /* Altera a cor do texto para um laranja quando passa o mouse */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    grid-gap: 80px; /* Espaço entre as imagens */
+    margin: 20px; /* Margem ao redor da grade */
+}
+
+.grid-item {
     text-align: center;
 }
 
-/* Style the header */
-h1 {
-    background-color: #333;
-    color: white;
-    padding: 20px;
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+    border-radius: 15px;
 }
 
-/* Style the form container */
-#calculadora-form {
-    background-color: white;
-    border-radius: 10px;
-    padding: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 22px auto;
-    max-width: 400px;
+.grid-item img:hover {
+    transform: scale(1.3); /* Aumenta a escala em 10% quando o mouse estiver sobre a imagem */
+    box-shadow: 0 0 20px rgba(0, 213, 255, 0.184);
 }
 
-/* Style form elements */
-label, input, select {
-    display:block;
-    margin: 10px 0;
-}
-
-input, select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
-/* Style the button */
-#calcular-btn {
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-#calcular-btn:hover {
-    background-color: #555;
-}
-
-/* Style the result container */
-#resultado {
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-/* Estilos específicos para dispositivos móveis */
-@media screen and (max-width: 600px) {
-    body {
-        padding: 0;
-    }
-
-    h1 {
-        padding: 15px;
-    }
-
-    #calculadora-form {
-        padding: 20px;
-        max-width: 100%;
-    }
-
-    label, input, select {
-        margin: 5px 0;
-    }
-
-    input, select {
-        padding: 8px;
-    }
-    
-    #calcular-btn {
-        padding: 8px 15px;
-        font-size: 16px;
-    }
+.image-with-margin {
+    margin-top: 50px; /* Ajuste o valor da margem superior conforme necessário */
 }
