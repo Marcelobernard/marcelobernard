@@ -24,3 +24,39 @@ function showSlides() {
   
   setTimeout(showSlides, 2000);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const inputBusca = document.getElementById("busca");
+  const itensDaGrade = document.querySelectorAll(".item-da-grade");
+
+  inputBusca.addEventListener("input", function () {
+    const termoBusca = inputBusca.value.toLowerCase();
+
+    itensDaGrade.forEach((item) => {
+      const titulo = item.querySelector(".titulo").textContent.toLowerCase();
+      if (titulo.includes(termoBusca)) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const inputBusca = document.getElementById("busca");
+  const itensDaGrade = document.querySelectorAll(".item-da-grade");
+
+  inputBusca.addEventListener("input", function () {
+    const termoBusca = inputBusca.value.toLowerCase();
+
+    itensDaGrade.forEach((item) => {
+      const titulo = item.querySelector(".titulo").textContent.toLowerCase();
+      if (titulo.includes(termoBusca)) {
+        item.classList.add("mostrar"); // Adiciona classe para mostrar o item
+      } else {
+        item.classList.remove("mostrar"); // Remove classe para ocultar o item
+      }
+    });
+  });
+});
