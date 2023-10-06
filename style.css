@@ -3,6 +3,7 @@ body {
   margin: 20px;
   line-height: 1.2;
   flex-direction: column;
+  /* padding: 0; */
   cursor: crosshair;
 }
 
