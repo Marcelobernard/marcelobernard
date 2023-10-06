@@ -3,13 +3,13 @@ body {
   margin: 20px;
   line-height: 1.2;
   flex-direction: column;
-  padding: 0;
+  /* padding: 0; */
   cursor: crosshair;
 }
 
 body::before {
   content: "";
-  background-image: url("fundo.webp");
+  background-image: url("Background.mp4");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
