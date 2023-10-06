@@ -9,6 +9,9 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <video id="background-video" autoplay loop muted>
+        <source src="background.mp4" type="video/mp4">
+    </video>
     <header>
         <div class="logotipo">
             <img src="logo.png" style="width: 20%;" alt="LOGO">
@@ -46,8 +49,9 @@
       <span class="dot"></span> 
     </div>
     <div class="barra-de-busca-container">
+        <div id="buscar-titulo">Buscar</div>
         <div class="barra-de-busca">
-            <input type="text" id="busca" placeholder="Buscar">
+            <input type="text" id="busca" placeholder="Exemplo: Battlefield">
             <button type="submit" class="icone">&#128269;</button>
         </div>
     </div>
