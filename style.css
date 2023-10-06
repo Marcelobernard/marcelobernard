@@ -3,7 +3,6 @@ body {
   margin: 20px;
   line-height: 1.2;
   flex-direction: column;
-  /* padding: 0; */
   cursor: crosshair;
 }
 
@@ -38,7 +37,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 10px 20px;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+background-color: rgb(0, 20, 12);
 }
 
 .logotipo {
@@ -70,6 +69,17 @@ font-weight: bold;
 .barra-de-busca-container {
   text-align: center;
   margin-top: 80px;
+  margin-left: 100px;
+  margin-right: 110px;
+}
+
+#buscar-titulo {
+  color: white;
+  padding-bottom: 3px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: larger;
+  padding-left: 5px;
 }
 
 .barra-de-busca {
@@ -78,6 +88,7 @@ font-weight: bold;
   border-radius: 5px;
   padding: 5px;
   width: 250px;
+  background-color: rgba(0, 20, 12, 0.7);
 }
 
 input[type="text"] {
@@ -88,6 +99,7 @@ flex: 1;
 color: white;
 border-radius: 5px;
 background-color: transparent;
+font-style: italic;
 }
 
 button[type="submit"] {
@@ -100,6 +112,7 @@ cursor: pointer;
 
 .icone {
 filter:grayscale(100%);
+padding-left: 40px;
 }
 
 .grade-de-conteudo {
@@ -194,6 +207,18 @@ animation-name: fade;
 animation-duration: 1.5s;
 }
 
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 @keyframes fade {
 from {opacity: .4} 
 to {opacity: 1}
@@ -230,5 +255,10 @@ to {opacity: 1}
     
   .titulo {
     margin-top: 30px;
-  }
+    }
+
+
+  .icone {
+    padding-left: 0px;
+    }
 }
